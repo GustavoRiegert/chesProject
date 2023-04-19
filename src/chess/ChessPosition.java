@@ -8,6 +8,7 @@ public class ChessPosition {
     private int row;
 
     public ChessPosition(char column, int row) {
+
         if (column < 'a' || column > 'h' || row < 1 || row > 8){
             throw new ChessException("Error instantiating ChessPosition. Valid values are a1 to h8.");
         }
@@ -24,7 +25,6 @@ public class ChessPosition {
     }
 
     protected Position toPosition() {
-
         return new Position(8 - row, column - 'a');
     }
 
